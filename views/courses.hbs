@@ -1,0 +1,39 @@
+<div class="row">
+    <main class="col-md-12">
+        <h3><br>Courses
+            <a href="/courses/add" class="btn btn-primary float-right">Add New Course</a>
+        </h3>
+        <br>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Description</th>
+                    <th></th>
+                </tr>
+                    {{#each courses}}
+                        <tr>
+                            <td><a href="/course/{{this.courseId}}">{{this.courseCode}}</a></td>
+                            <td><a href="/students?course={{this.courseId}}">{{this.courseDescription}}</a></td>
+                            <td>
+                                <div class="float-right">
+                                    <form action="/course/delete/{{this.courseId}}" method="DELETE">
+                                        <button type="submit" class="btn btn-danger">Remove</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tr>
+            </table>
+        </div>
+    </main>
+
+     {{!-- No course to display --}}
+    {{#if (not courses)}}
+        <div class="col-md-12 text-center">
+            <strong>{{message}}</strong>
+        </div>
+    {{/if}}
+    
+</div>

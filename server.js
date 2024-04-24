@@ -1,15 +1,3 @@
-/*********************************************************************************
-*  WEB700 – Assignment 06
-*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part 
-*  of this assignment has been copied manually or electronically from any other source 
-*  (including 3rd party web sites) or distributed to other students.
-* 
-*  Name: Thi Ngoc Yen Tran       Student ID: 118828235       Date: Mar 28, 2024
-* 
-* Online (cyclic) Link: https://uptight-battledress-dog.cyclic.app
-*
-********************************************************************************/
-
 var HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
 const exphbs = require('express-handlebars');
